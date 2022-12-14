@@ -1,109 +1,160 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-.header{
-    width: 1440px;
-    max-width: 90%;
-    margin: 40px auto;
+.header {
+  width: 1440px;
+  max-width: 90%;
+  margin: 40px auto;
 }
-.header ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+.header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
-.header ul li a{
- font-size: 20px;
- font-weight: bold;
- transition: .3s;
+.header ul li a {
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
 }
-.header ul li a:hover{
-    color: antiquewhite;
+.header ul li a:hover {
+  color: antiquewhite;
 }
-.container{
-    position: relative;
-    width: 1440px;
-    max-width: 70%;
-    height: 80vh;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center
+.container {
+  position: relative;
+  width: 1440px;
+  max-width: 70%;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.content{
-    background-color: antiquewhite;
-    width: 60%;
-    height: 80%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    justify-content: center;
-    align-items: center
+.content {
+  background-color: antiquewhite;
+  width: 60%;
+  height: 80%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
 }
-.content input,button{
-    padding: 15px;
+.content input,
+button {
+  padding: 15px;
 }
-.content button{
-    border: none;
-    background-color: black;
-    color: #fff;
-    border-radius: 10px;
+.content button {
+  border: none;
+  background-color: black;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.content button:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.toast {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: green;
+  position: absolute;
+  right: -100px;
+  top: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  animation: get-gel 0.5s linear;
+}
+.toast-error {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: red;
+  position: absolute;
+  right: -100px;
+  top: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  animation: get-gel 0.5s linear;
+}
+
+.display {
+  display: flex;
+}
+
+@keyframes get-gel {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pop-up {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.692);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.edit {
+  width: 50%;
+  height: 450px;
+  margin: 4rem auto;
+  background-color: teal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.edit span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
     cursor: pointer;
-    transition: .3s;
-    font-weight: bold;
 }
-.content button:hover{
-    background-color: #fff;
-    color: black;
+.edit h1{
+    font-weight: 600;
 }
-
-.toast{
-    width: 200px;
-    height: 50px;
+.edit label{
+    color: #000;
+    font-size: 1.5rem;
+}
+.edit input{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.edit button{
+    cursor: pointer;
+    border: none;
     border-radius: 10px;
-    background-color: green;
-    position: absolute;
-    right: -100px;
-    top: 10px;
-    display: none;
-    justify-content: center;
-    align-items: center;
+    background-color: #000;
     color: #fff;
-    font-weight: bold;
-    animation: get-gel 0.5s linear;
-}
-.toast-error{
-    width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: red;
-    position: absolute;
-    right: -100px;
-    top: 10px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: bold;
-    animation: get-gel 0.5s linear;
-}
-
-
-.display{
-    display: flex;
-}
-
-@keyframes get-gel{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
 }

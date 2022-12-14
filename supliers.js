@@ -17,7 +17,7 @@ function fillTable(element) {
   let contactTitle = document.createElement("td");
   contactTitle.innerHTML = element.contactTitle;
   let region = document.createElement("td");
-  region.innerHTML = element.address.region;
+  region.innerHTML = element?.address?.region;
   tr.appendChild(Id);
   tr.appendChild(companyName);
   tr.appendChild(contactName);
